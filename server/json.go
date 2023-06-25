@@ -17,7 +17,7 @@ func NewJsonServer(listenAddr string) *JsonServer {
 
 func (s JsonServer) Run() {
 	h := handler.PriceHandler{
-		Pf: service.NewPriceFetcher(),
+		Pf: service.NewLogging(service.NewPriceFetcher()),
 	}
 
 	http.HandleFunc("/price", h.GetPrice)
