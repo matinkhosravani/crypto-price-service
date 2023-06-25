@@ -9,6 +9,7 @@ type Env struct {
 	AppEnv              string `mapstructure:"APP_ENV"`
 	PriceExpirationTime int    `mapstructure:"PRICE_EXPIRATION_TIME_MINUTE"`
 	JSONListenAddr      string `mapstructure:"JSON_LISTEN_ADDR"`
+	GRPCListenAddr      string `mapstructure:"GRPC_LISTEN_ADDR"`
 	RedisHost           string `mapstructure:"REDIS_HOST"`
 	RedisPort           string `mapstructure:"REDIS_PORT"`
 	RedisPassword       string `mapstructure:"REDIS_PASSWORD"`

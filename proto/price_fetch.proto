@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+service PriceFetcher {
+  rpc Fetch(PriceInput) returns (PriceOutput);
+}
+
+message PriceInput {
+  string symbol = 1;
+}
+
+message PriceOutput {
+  string symbol = 1;
+  double price = 2;
+}
